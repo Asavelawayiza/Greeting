@@ -1,15 +1,40 @@
-div.a {
-  text-align: center;
+.body{
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.name {
+  justify-content: center;
+  display: flex;
+
+}
+
 h1 {
- font-size: 80px;
+  justify-content: center;
+  display: flex;
+  font-size: 80px;
 }
-div.b {
-    font-size: 35px;
+
+.language {
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
   }
   
-  div.c {
+  .Btns {
+    justify-content: center;
+    display: flex;
     font-size: 25px;
-   
-  }
+   }
+
+   .msg {
+    justify-content: center;
+    display: flex;
+   }
+
+   .counter{
+    justify-content: center;
+    display: flex;
+   }
+
     

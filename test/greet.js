@@ -1,22 +1,55 @@
-function greet(name){
-  var name = '';
-    return('Hello' + ', ' + name);
-
-  };
-
-  var greeting = greet(name);
+function greeting(nameList) {
+  var greetedNames = nameList || {};
   
- 
-    function Language() {
-        if (Language = english)
-        return "Hello";
+
+
+  function language(name, lang) {
+    if (!name){
+      return "please enter a name!"
     }
-        if(Language = Xhosa){
-            return "Molo";
-        }
+    else if(!lang){
+      return "please select language"
+    }
 
-        var greeting = greet(name);
-
-
-
+    var regex = /^[a-zA-Z]+$/;
+    var newName = regex.test(name)
+    if (newName === true) {
+      if (greetedNames[name] === undefined) {
+        greetedNames[name] = 0;
+      }
+      
+      if (lang === 'English') {
+        return "Hello, " + name + "!";
+      }
+      else if (lang === 'Xhosa') {
+        return "Molo, " + name + "!";
+      }
+      else if (lang === 'Afrikaans') {
+        return "Hallo, " + name + "!";
+      }
   
+  }
+  else if(newName === false){
+    return "Does not take in numbers"
+  } 
+} 
+  
+  function getName() {
+    return greetedNames;
+  }
+
+  function counter() {
+    var c = Object.keys(greetedNames)
+    return c.length;
+  }
+  
+
+
+  return {
+    language,
+    getName,
+    counter
+  }
+}
+
+
