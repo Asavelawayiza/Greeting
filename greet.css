@@ -30,11 +30,13 @@ h1 {
    .msg {
     justify-content: center;
     display: flex;
+    font-weight: bold;
    }
 
    .counter{
     justify-content: center;
     display: flex;
+    font-weight: bold;
    }
 
     
