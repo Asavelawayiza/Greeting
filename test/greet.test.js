@@ -36,16 +36,16 @@ describe('greeting test' , function(){
         var instance = greeting();
          instance.keepName("Asavela")
          instance.keepName("Asavela")
-        assert.deepEqual({name: "Asavela"}, instance.getName());
+        assert.deepEqual(1, instance.counter());
 
     })
     it('it should increment the counter when a different name is entered', function() {
         var instance = greeting();
-            instance.keepName({name:'asa'});
-            assert.equal(1, instance.counter());
+            instance.keepName('asa');
+            instance.keepName('demi');
+            assert.equal(2, instance.counter());
     })
     
-    it()
 
 });
 

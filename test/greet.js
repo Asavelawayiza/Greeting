@@ -2,7 +2,7 @@ function greeting(nameList) {
   var greetedNames = nameList || {};
   
   function keepName(name){
-      greetedNames['name'] = name
+      greetedNames[name] = name
   }
 
   function language(name, lang) {
