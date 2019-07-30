@@ -16,10 +16,11 @@ function greeting(nameList) {
     var regex = /^[a-zA-Z]+$/;
     var newName = regex.test(name)
     name = name.charAt(0).toUpperCase() + name.slice(1)
-    //name = name.charAt(0).toLowerCase();
+    var newName = regex.test(name)
+    var lowerName = name.toLowerCase();
     if (newName === true) {
-      if (greetedNames[name] === undefined) {
-        greetedNames[name] = 0;
+      if (greetedNames[lowerName] === undefined) {
+        greetedNames[lowerName] = 0;
       }
       
       if (lang === 'English') {
