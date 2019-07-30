@@ -1,7 +1,9 @@
 function greeting(nameList) {
   var greetedNames = nameList || {};
   
-
+  function keepName(name){
+      greetedNames['name'] = name
+  }
 
   function language(name, lang) {
     if (!name){
@@ -48,7 +50,8 @@ function greeting(nameList) {
   return {
     language,
     getName,
-    counter
+    counter,
+    keepName
   }
 }
 
